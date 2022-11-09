@@ -1,0 +1,265 @@
+http://kodai.manualai.lt/html/pagrindai/teksto-formatavimas.html
+
+HTML teksto formatavimas - pagrindinės žymės
+Žymė	Aprašymas
+<strong>	Nurodo paryškintą tekstą
+<big>	Nurodo padidintą tekstą
+<em>	Nurodo pabrėžtą tekstą
+<i>	Nurodo pasvirusį tekstą
+<small>	Nurodo pamažintą tekstą
+<sub>	Nurodo nuleistą tekstą
+<sup>	Nurodo pakeltą tekstą
+<ins>	Nurodo pabrauktą tekstą
+<del>	Nurodo ištrintą tekstą
+<s>	Nevartotinas, naudokite <del>
+<strike>	Nevartotinas, naudokite <del>
+<u>	Nevartotinas, naudokite stilius
+ 
+
+Kompiuterinio teksto formatavimas
+Žymė	Aprašymas
+<code>	Nurodo kompiuterinį tekstą
+<kbd>	Nurodo klaviatūrinį tekstą
+<samp>	Nurodo pavyzdinį kompiuterinį kodą
+<tt>	Nurodo teletaipo tekstą
+<var>	Nurodo kintamajį
+<listing>	Nevartotinas, naudokite <pre>
+<plaintext>	Nevartotinas, naudokite <pre>
+<xmp>	Nevartotinas, naudokite <pre>
+ 
+
+Citatų ir apibrėžimų tekstų formatavimas
+Žymė	Aprašymas
+<abbr>	Nurodo sutrumpinimą
+<acronym>	Nurodo akronimą
+<address>	Nurodo adresą
+<bdo>	Nurodo teksto kryptį
+<blockquote>	Nurodo didelę citatą
+<q>	Nurodo mažą citatą
+<cite>	Nurodo citatą
+<dfn>	Nurodo apibrėžimą
+
+--------------------------------------------------
+Bendri
+Žymė (tag'as)	Aprašymas	Indeksai
+<!DOCTYPE>	Nurodo dokumento tipą	STF
+<html>	Nurodo HTML dokumentą	STF
+<body>	Nurodo dokumento kūna - body	STF
+<h1> to <h6>	Nurodo HTML antraštes	STF
+<p>	Nurodo pastraipą	STF
+<br />	Nurodo puslapio eilutės lūžio vietą	STF
+<hr />	Nurodo horizontalią liniją	STF
+<!--...-->	Nurodo komentarą	STF
+ 
+
+Formatavimas
+Žymė (tag'as)	Aprašymas	Indeksai
+<acronym>	Nurodo akronimą	STF
+<abbr>	Nurodo sutrumpinimą	STF
+<address>	Nurodo kontaktinę autoriaus informaciją	STF
+<b>	Nurodo pastorintą šriftą (bold)	STF
+<bdo>	Nurodo teksto kryptį	STF
+<big>	Nurodo didelį tekstą	STF
+<blockquote>	Nurodo citatos bloka	STF
+<center>	Nevartotinas. Nurodo teksto centravimą	TF
+<cite>	Nurodo citatą	STF
+<code>	Nurodo kompiuterinio kodo tekstą	STF
+<del>	Nurodo ištrintą tekstą (perbrauktą)	STF
+<dfn>	Nurodo termino paaiškinimą	STF
+<em>	Nurodo pasvirą italic tekstą	STF
+<font>	Nevartotinas. Nurodo šriftą, spalvą ir teksto dydį	TF
+<i>	Nurodo pasvirą italic tekstą	STF
+<ins>	Nurodo iterptą tekstą	STF
+<kbd>	Nurodo klaviaturos tekstą	STF
+<pre>	Nurodo iš anksto formatuotą tekstą	STF
+<q>	Nurodo trumpą citatą	STF
+<s>	Nevartotinas. Nurodo perbrauktą tekstą	TF
+<samp>	Nurodo pavyzdinį kompiuterinį tekstą	STF
+<small>	Nurodo sumažintą tekstą	STF
+<strike>	Nevartotinas. Nurodo perbrauktą tekstą	TF
+<strong>	Nurodo pajuodintą tekstą (bold)	STF
+<sub>	Nurodo pažemintą tekstą	STF
+<sup>	Nurodo pakeltą tekstą	STF
+<tt>	Nurodo teletaipo tekstą	STF
+<u>	Nevartotinas. Nurodo pabrauktą tekstą	TF
+<var>	Nurodo kintamaji (pastaba: tai nėra kintamasis, kaip programavimo kalbose)	STF
+<xmp>	Nevartotinas. Nurodo iš anksto formatuotą tekstą	
+ 
+
+Formos
+Žymė (tag'as)	Aprašymas	Indeksai
+<form>	Nurodo HTML formą vartotojo informacijos įvedimui	STF
+<input />	Nurodo vartotojo informacijos įvedimui skirtą vietą	STF
+<textarea>	Nurodo keletos eilučių įvedimo lauką	STF
+<button>	Nurodo paspaudžiamą mygtuką	STF
+<select>	Nurodo pasirinkimų sąrašą (pvz.: išskleidžiamą)	STF
+<optgroup>	Pasirinkimų sąraše nurodo pasirinkimų grupę	STF
+<option>	Pasirininkimų sąraše nurodo pasirinkimą	STF
+<label>	Nurodo etiketę įvedimo laukui	STF
+<fieldset>	Nurodo rėmelį aplink formos elementus (skirta grupiavimui)	STF
+<legend>	Nurodo formos elementui antraštę	STF
+<isindex>	Nevartotinas. Nurodo ieškomą indeksą susijusį su dokumentu	TF
+ 
+
+Rėmai, langai
+Žymė (tag'as)	Aprašymas	Indeksai
+<frame />	Nurodo naują langa, remą (angl.: frame) remų komplekte (angl.: frameset)	F
+<frameset>	Nurodo rėmų, langų komplektą	F
+<noframes>	Nurodo alternatyvų kodą skirtą vartotojams, kurie nepalaiko langų, rėmų (angl.: frames)	TF
+<iframe>	Nurodo mozaikinį rėmą (angl.: inline frame)	TF
+ 
+
+Paveikslėliai
+Žymė (tag'as)	Aprašymas	Indeksai
+<img />	Nurodo paveikslėlį	STF
+<map>	Nurodo paveikslėlių žemėlapį	STF
+<area />	Nurodo plotą, viduje paveikslėlio žemėlapio (image-map)	STF
+ 
+
+Nuorodos
+Žymė (tag'as)	Aprašymas	Indeksai
+<a>	Nurodo nuorodą	STF
+<link />	Nurodo sąryšį tarp dokumentų	STF
+ 
+
+Sąrašai
+Žymė (tag'as)	Aprašymas	Indeksai
+<ul>	Nurodo netvarkingą sąrašą	STF
+<ol>	Nurodo tvarkingą sąrašą	STF
+<li>	Nurodo sąraše esantį elementą	STF
+<dir>	Nevartotinas. Nurodo direktorijos sąrašą	TF
+<dl>	Nurodo paaiškinimu sąrašą	STF
+<dt>	Nurodo terminą terminų sąrašę	STF
+<dd>	Nurodo termino paaiškinimą terminų sąraše	STF
+<menu>	Nevartotinas. Nurodo meniu sąrašą	TF
+ 
+
+Lentelės
+Žymė (tag'as)	Aprašymas	Indeksai
+<table>	Nurodo lentelę	STF
+<caption>	Nurodo lentelės antraštę	STF
+<th>	Nurodo antraštinę lentelės ląstelę	STF
+<tr>	Nurodo lentelės eilutę	STF
+<td>	Nurodo lentelės ląstelę	STF
+<thead>	Grupuoja viršutinę lentelės dalį. Skirta antraštėms	STF
+<tbody>	Grupuoja lentelės vidurį, pagrindą (body)	STF
+<tfoot>	Grupuoja lentelės apatinę dalį (footer)	STF
+<col />	Nurodo požymių reikšmes viename ar keliuose lentelės stulpeliuose	STF
+<colgroup>	Nurodo lentelės stulpelių grupę formatavimui	STF
+ 
+
+Stiliai
+Žymė (tag'as)	Aprašymas	Indeksai
+<style>	Nurodo dokumento stiliaus informaciją	STF
+<div>	Nurodo sekciją dokumente, naudojamas kaip konteineris kitiems elementams	STF
+<span>	Nurodo sekciją dokumente	STF
+ 
+
+Meta informacija
+Žymė (tag'as)	Aprašymas	Indeksai
+<head>	Nurodo informaciją apie dokumentą	STF
+<title>	Nurodo dokumento pavadinimą, antraštę	STF
+<meta>	Nurodo meta informaciją apie HTML dokumentą	STF
+<base />	Nurodo visų nuorodų bazinį adresą pagal nutylėjimą	STF
+<basefont />	Nevartotinas. Nurodo nutylimajį teksto šriftą, spalvą ir dydį tekstiniame dokumente	TF
+ 
+
+Programavimas
+Žymė (tag'as)	Aprašymas	Indeksai
+<script>	Nurodo kliento pusės skriptą (pvz.: javascript)	STF
+<noscript>	Nurodo alternatyvų kodą skirtą vartotojams, kurie nepalaiko skriptų (javascript ir kt.)	STF
+<applet>	Nevartotinas. Nurodo iskiepį	TF
+<object>	Nurodo objekto iterpimą (pvz.: flash)	STF
+<param />	Nurodo objekto parametrą (pvz.: flash)
+
+------------ Pagal abecele ----------------------------------------------------------------------------------------
+Žymė (tag'as)	Aprašymas	Indeksai
+<!--...-->	Nurodo komentarą	STF
+<!DOCTYPE>	Nurodo dokumento tipą	STF
+<a>	Nurodo nuorodą	STF
+<abbr>	Nurodo sutrumpinimą	STF
+<acronym>	Nurodo akronimą	STF
+<address>	Nurodo kontaktinę autoriaus informaciją	STF
+<applet>	Nevartotinas. Nurodo įskiepį	TF
+<area/>	Nurodo plotą viduje paveikslėlio žemėlapio (image-map)	STF
+<b>	Nurodo pastorintą šriftą (bold)	STF
+<base/>	Nurodo visų nuorodų bazinį adresą pagal nutylėjimą	STF
+<basefont />	Nevartotinas. Nurodo nutylimąjį teksto šriftą, spalvą ir dydį tekstiniame dokumente	TF
+<bdo>	Nurodo teksto kryptį	STF
+<big>	Nurodo didelį tekstą	STF
+<blockquote>	Nurodo citatos bloką	STF
+<body>	Nurodo dokumento kūną (body)	STF
+<br />	Nurodo puslapio eilutės lūžio vietą	STF
+<button>	Nurodo paspaudžiamą mygtuką	STF
+<caption>	Nurodo lentelės antraštę	STF
+<center>	Nevartotinas. Nurodo teksto centravimą	TF
+<cite>	Nurodo citatą	STF
+<code>	Nurodo kompiuterinio kodo tekstą	STF
+<col />	Nurodo požymių reikšmes viename ar keliuose lentelės stulpeliuose	STF
+<colgroup>	Nurodo lentelės stulpelių grupę formatavimui	STF
+<dd>	Nurodo termino paaiškinimą terminų sąraše	STF
+<del>	Nurodo ištrintą tekstą (perbrauktą)	STF
+<dfn>	Nurodo termino paaiškinimą	STF
+<dir>	Nevartotinas. Nurodo direktorijos sąrašą	TF
+<div>	Nurodo sekciją dokumente, naudojamas kaip konteineris kitiems elementams	STF
+<dl>	Nurodo paaiškinimų sąrašą	STF
+<dt>	Nurodo terminą terminų sąraše	STF
+<em>	Nurodo pasvirą italic tekstą	STF
+<fieldset>	Nurodo rėmelį aplink formos elementus. Skirta grupiavimui	STF
+<font>	Nevartotinas. Nurodo teksto šriftą, spalvą ir dydį	TF
+<form>	Nurodo HTML formą vartotojo informacijos įvedimui	STF
+<frame />	Nurodo naują langą, rėmą (angl.: frame) rėmų komplekte (angl.: frameset)	F
+<frameset>	Nurodo rėmų, langų komplektą	F
+<h1>, <h2> .. iki <h6>	Nurodo HTML antraštes	STF
+<head>	Nurodo informaciją apie dokumentą	STF
+<hr />	Nurodo horizontalią liniją	STF
+<html>	Nurodo HTML dokumentą	STF
+<i>	Nurodo pasvirą italic tekstą	STF
+<iframe>	Nurodo mozaikinį rėmą (angl.: inline frame)	TF
+<img />	Nurodo paveikslėlį	STF
+<input />	Nurodo varototjo informacijos įvedimui skirtą vietą	STF
+<ins>	Nurodo įterptą tekstą	STF
+<isindex>	Nevartotinas. Nurodo ieškomą indeksą, susijusį su dokumentu	TF
+<kbd>	Nurodo klaviatūros tekstą	STF
+<label>	Nurodo etiketę įvedimo laukui	STF
+<legend>	Nurodo formos elementams antraštę	STF
+<li>	Nurodo sąraše esantį elementą	STF
+<link />	Nurodo sąryšį tarp dokumentų	STF
+<map>	Nurodo paveikslėlių žemėlapį	STF
+<menu>	Nevartotinas. Nurodo meniu sąrašą	TF
+<meta />	Nurodo meta informaciją apie HTML dokumentą	STF
+<noframes>	Nurodo alternatyvų kodą, skirtą vartotojams, kurie nepalaiko langų, rėmų (frames)	TF
+<noscript>	Nurodo alternatyvų kodą, skirtą vartotojams, kurie nepalaiko skriptų (javascript ir kt.)	STF
+<object>	Nurodo objekto įterpimą (pvz.: flash)	STF
+<ol>	Nurodo tvarkingą sąrašą	STF
+<optgroup>	Pasirinkimų sąraše nurodo pasirinkimų grupę	STF
+<option>	Pasirininkimų sąraše nurodo pasirinkimą	STF
+<p>	Nurodo pastraipą	STF
+<param />	Nurodo objekto parametrą (pvz.: flash)	STF
+<pre>	Nurodo iš anksto formatuotą tekstą	STF
+<q>	Nurodo trumpą citatą	STF
+<s>	Nevartotinas. Nurodo perbrauktą tekstą	TF
+<samp>	Nurodo pavyzdinį kompiuterinį tekstą	STF
+<script>	Nurodo kliento pusės skriptą (pvz.: javascript)	STF
+<select>	Nurodo pasirinkimų sąrašą (pvz.: išskleidžiamą)	STF
+<small>	Nurodo sumažintą tekstą	STF
+<span>	Nurodo sekciją dokumente	STF
+<strike>	Nevartotinas. Nurodo perbrauktą tekstą	TF
+<strong>	Nurodo pajuodintą tekstą (bold)	STF
+<style>	Nurodo dokumento stiliaus informaciją	STF
+<sub>	Nurodo pažemintą tekstą	STF
+<sup>	Nurodo pakeltą tekstą	STF
+<table>	Nurodo lentelę	STF
+<tbody>	Grupuoja lentelės vidurį, pagrindą (body)	STF
+<td>	Nurodo lentelės ląstelę	STF
+<textarea>	Nurodo kelių eilučių įvedimo lauką	STF
+<tfoot>	Grupuoja lentelės apatinę dalį (footer)	STF
+<th>	Nurodo antraštinę lentelės ląstelę	STF
+<thead>	Grupuoja viršutinę lentelės dalį. Skirta antraštėms	STF
+<title>	Nurodo dokumento pavadinimą, antraštę	STF
+<tr>	Nurodo lentelės eilutę	STF
+<tt>	Nurodo teletaipo tekstą	STF
+<u>	Nevartotinas. Nurodo pabrauktą tekstą	TF
+<ul>	Nurodo netvarkingą sąrašą	STF
+<var>	Nurodo kintamąjį (pastaba: tai nėra kintamasis kaip programavimo kalbose)	STF
+<xmp>	Nevartotinas. Nurodo iš anksto formatuotą tekstą
