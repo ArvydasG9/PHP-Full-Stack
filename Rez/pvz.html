@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pvz</title>
+    <link rel="icon" href="../img/minion_1.png"><!-- ikelia ikona prie puslapio pavadinimo -->
+    
+    <style>
+        :root {
+            /* :root - kintamieji. jo atvaizdavimui iskvietimui var(--fotoAdresas) -> vietoj url("https://...") */
+            --fotoAdresas: url("https://g3.dcdn.lt/images/pix/katinas-60959003.jpg");
+            --zalsva: rgb(111, 247, 107);
+        }
+
+        table {
+            border-left: 1px solid blue;
+            border-top: 1px solid blue;
+            border-collapse: collapse;
+        }
+
+        td {
+            /* border: 1px solid blue; */
+            border-right: 1px solid blue;
+            border-bottom: 1px solid blue;
+            padding: 10px;
+            /* atitraukimas */
+        }
+
+        /* Klasės gali būti priskiriamos neribotam kiekiui elementų */
+        .table {
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        .table td {
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .table th {
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .kl1 {
+            margin: 0;
+            padding: 0 0 0 0;
+            /* atstumai - top, right, bottom, left */
+        }
+
+        #b1,
+        #b2 {
+            width: 50%;
+        }
+
+        #b1 {
+            background-color: yellow;
+        }
+
+        #b2 {
+            background-color: rgb(0, 238, 255);
+        }
+
+        .pozicija {
+            position: fixed;
+            /* static, relative, fixed, absolute, sticky */
+            /* bottom: 0; */
+            top: 150px;
+            left: 250px;
+            width: 300px;
+            border: 3px solid #73AD21;
+        }
+    </style>
+
+</head>
+
+<body>
+    Naudingos nuorodos: <br />
+
+    <a href="https://www.youtube.com/watch?v=JqR-xfCHW1k&list=RDJqR-xfCHW1k&start_radio=1">Linkas į WEB tame pačiame
+        puslapyje</a>
+    <br /><a href="https://www.youtube.com/watch?v=gEPmA3USJdI&list=RDYR5ApYxkU-U&index=3" target="_blank">Linkas į WEB
+        naujame (blank) puslapyje</a>
+    <br /><a href="C:/Users/AG/Desktop/BIT/Code/PHP-Full-Stack/ND/20221108/red.html">Linkas į projekto vietinį failą</a>
+    <br /><a href="../ND/20221108/red.html" style="color: red;">Linkas į projekto vietinį failą - nerekomenduotina</a>
+    <!-- taskiuku skaičius, gryžimo į aukštesnes direktorijas žingsniai -->
+    <br /><a href="http://kodai.manualai.lt/html/pagrindai/teksto-formatavimas.html" target="_blank">HTML pamokos
+        lietuviškai</a>
+    <br />
+    <p>w3schools:</p>
+    <ul>
+        <li><a href=" https://www.w3schools.com/" target="_blank">HTML pamokos w3schools</a></li>
+        <li><a href="https://www.w3schools.com/CSSREF/pr_border-style.php" target="_blank">w3schools_CSS
+                border-style</a> </li>
+        <li><a href="https://www.w3schools.com/csSref/css_selectors.php" target="_blank">w3schools_CSS Selector</a>
+        </li>
+    </ul>
+    <br /><a href="https://pandao.github.io/editor.md/en.html" target="_blank">teksto redaktorius</a>
+    <br /><a href="https://fonts.google.com/" target="_blank">teksto fntu pasirinkimas</a>
+    <p>Mozila</p>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozila HTML</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers" target="_blank">Mozila_Media
+                container formats (file types)</a> </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">Mozila_The Video
+                Embed element</a> </li>
+    </ul>
+    <br /><a href="https://cssgradient.io/" target="_blank">Generuoti spalvų perėjimo animacią</a>
+    <br /><a href="https://www.image-map.net/" target="_blank">Generuoti Image map</a>
+    <br /><a href="https://css3generator.com/" target="_blank">Generuoti css3generator</a>
+    <br /><a href="https://css.gg/" target="_blank">css katalogai</a>
+    <br /><a href="https://the-echoplex.net/flexyboxes//" target="_blank">css katalogai</a>
+    <p>codepen:</p>
+    <ul>
+        <li><a href="https://codepen.io/" target="_blank">codepen_The best place to build, test, and discover front-end code</a></li>
+        <li><a href="https://codepen.io/alvarotrigo/pen/MWEJEWG" target="_blank">codepen_Pure CSS responsive menu</a></li>
+    </ul>
+    <br /><a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+    
+    <h3>Pamokos:</h3>
+   <a href="https://appbeats.themetags.com/index.html" target="_blank">puslapio pvz</a>
+
+    <ul class="R">
+        <!-- nenumeruojamas su bubuliukais -->
+        <li><a href="#b1">nuoroda tekste pagal ID #b1</a></li>
+        <li><a href="#b2">nuoroda tekste pagal ID #b2</a></li>
+    </ul>
+    <hr /><!-- brėžia brūkšnį ir perkelia į kitą eilutę  -->
+    <h3>Tag'ai</h3>
+    <pre>
+        pre - 
+    Atvaizduoja tekstą ne vienoje linijoje, bet kai išdėliota kode
+</pre>
+
+    <br />
+    <p class="pozicija">pozicijos fiksacija</p>
+    <h1>Stiliai</h1> <!-- stiliai -->
+    <h2>Stilius float </h2>
+    <p>
+        <img style="float: right; width: 150px;"
+            src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/2-queen-band-topi-saurio.jpg"
+            alt="Muzikinių kūrinių atlikejai">
+        Paveikslą rusiuoja su stiliaus komanda (float) į kaire (left) arba į dešinę (right). Paveikslėlis -img-
+        trktuojamas, kaip txt
+    </p>
+    <br />
+    <p title="objekto komentaras">Užvesk pelę: Stilius title="komentaras"</p>
+    <br /><em>em xxxxxxxxxxxxxxxx</em>
+    <br /><del>del xxxxxxxxxxxxxx</del>
+    <br /><i>i - pasvirimas</i>
+    <br /><strong>strong - paryskinimas strong</strong>
+    <br /><b>b - paryskinimas analogiskai strong</b>
+    <br /><small>small xxxxxxxxxxxxx</small>
+    <br><mark>mark - pažymėti txt</mark>
+    <br />pakelti kvadretu <strong>2<sup>2</sup></strong>
+    <br />Vandens formulė - <strong>H<sub>2</sub>O</strong>
+    <br />Šiuos standartinių stilių savybes galima perrašyti "style" class'ėse tais pačiais pavadinimais arba sukurti
+    savus
+    <br />
+    <p>q - <q>tekstą įkelia į kabutes</q></p>
+    <br /><q>q - Nurodo mažą citatą</q>
+    <br /><cite>cite - Nurodo citatą</cite>
+
+
+    <br /><strong>strong - Nurodo paryškintą tekstą</strong>
+    <br /><em>em - Nurodo pabrėžtą tekstą</em>
+    <br /><i>i - Nurodo pasvirusį tekstą</i>
+    <br /><small>small - Nurodo pamažintą tekstą</small>
+    <br /><sub>sub - Nurodo nuleistą tekstą</sub>
+    <br /><sup>sup - Nurodo pakeltą tekstą</sup>
+    <br /><ins>ins - Nurodo pabrauktą tekstą</ins>
+    <br /><del>del - prbraukia tekstą</del>
+    <br /><s>s - prbraukia tekstą. Nevartotinas, naudokite del</s>
+    <br /><code>code - Nurodo kompiuterinį tekstą</code>
+    <br /><kbd>kbd - Nurodo klaviatūrinį tekstą</kbd>
+    <br /><samp>samp - Nurodo pavyzdinį kompiuterinį kodą</samp>
+    <br /><var>var - Nurodo kintamajį</var>
+    <br /><abbr>abbr - Nurodo sutrumpinimą</abbr>
+    <br />
+    <address>address - Nurodo adresą</address>
+    <br /><bdo>bdo - Nurodo teksto kryptį</bdo>
+    <br />
+    <blockquote>blockquote - Nurodo didelę citatą</blockquote>
+
+
+    <br />
+    <p>
+        <span style="font-size:20px; color:#003;">span žymė - </span>
+        <span style="color:#333; font-size:16px; font-style:italic;">
+            pati viena nedaro nieko, tačiau tekstui, esančiam jos viduje galime suteikti išskirtinus stilius, galime tai
+            naudoti kaip pasirinkimo galimybe per JavaScript selektorius. Tai yra toks konteineris kitiems elementams.
+        </span>
+    </p>
+    <br /><em>em- Nurodo pasvirą italic tekstą</em>
+    <br /> <dfn>dfn - Nurodo termino paaiškinimą</dfn>
+    <br /><code>code - Nurodo kompiuterinio kodo tekstą</code>
+    <br /> <samp>samp - Nurodo pavyzdinį kompiuterinį tekstą</samp>
+    <br /><kbd>kbd - Nurodo klaviatūros tekstą</kbd>
+    <br /><var>var - Nurodo kintamąjį (pastaba: tai nėra kintamasis, kaip programavimo kalbose)</var>
+    <br /> <cite>cite - Nurodo citatą</cite>
+
+    <p style="color:blue">Mėlynos spalvos txt</p>
+    <p style="color: rgb(71, 145, 255); font-size: 30px;">Spalva, dydis</p><!-- Spalvos -->
+    <p>Lorem + skaicius => automatiškai suformuojamas sakinys is tiek zodzių, koks įvestas skaičius</p>
+    <!-- Lorem + skaicius: autoatiskai uzpildo kozkokiu tekstu  -->
+
+    <h2 style="margin: 5px; padding: 0 0 0 0;">Atstumai: margin, padding</h2>
+
+
+
+    <hr /><!-- Sarašai -->
+    <h2>Sarašai (list - ul, ol), + li</h2>
+    <ul>
+        <!-- nenumeruojamas su bubuliukais -->
+        <li>pirmas -ul>li</li>
+        <li>antra -ul>li</li>
+        <li>trecia -ul>li</li>
+    </ul>
+    <ol>
+        <!-- numeruojamas su bubuliukais -->
+        <li>pirmas -ol>li</li>
+        <li>antra -ol>li</li>
+        <li>trecia -ol>li</li>
+    </ol>
+    <hr /> <!-- Savybes inline -->
+    <table class="table">
+        <!-- Lentelės su antrašte -->
+        <thead>
+            <tr>
+                <th>Vardas</th>
+                <th>Pavardė</th>
+                <th>Adresas</th>
+                <th>Telefonas</th>
+                <th>Gimimo diena</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Vardenis</td>
+                <td>Pavardenis</td>
+                <td>Girstupio 68-115</td>
+                <td>+370*6152165</td>
+                <td>1980-15-15</td>
+            </tr>
+            <tr>
+                <!-- colspan atributas nurodo kiek stulpelių ploto turėtų užimti vienas stulpelis -->
+                <td colspan="2">Vardenis</td>
+                <!-- <td></td> -->
+                <td>Girstupio 68-115</td>
+                <td>+370*6152165</td>
+                <!-- rowspan atributas nurodo kiek eilučių aukščio turėtų užimti stulpelis -->
+                <td rowspan="2">1980-15-15</td>
+            </tr>
+            <tr>
+                <td>Vardenis</td>
+                <td>Pavardenis</td>
+                <td>Girstupio 68-115</td>
+                <td>+370*6152165</td>
+            </tr>
+        </tbody>
+    </table> <!-- Lentelės -->
+
+    <br />
+    <dl style="border: 1px solid black;">
+        <dt>Kava</dt>
+        <dd>Juodas karštas gėrimas</dd>
+        <dt>Pienas</dt>
+        <dd>Baltas vėsus gėrimas</dd>
+    </dl>
+
+    <hr /> <!-- Nuorodos -->
+    <h2>Formos</h2>
+    Kai vartotojas paspaudžia duomenų pateikimo mygtuką (submit), tada formos duomenys yra išsiunčiami serveriui. Formos
+    action atribute nurodoma koks failas priims siunčiamus duomenis.
+    <p>---Frm-1 ---</p>
+    <form>
+        Vardas:
+        <input type="text" name="vardas">
+        <br />
+        Pavardė:
+        <input type="text" name="pavarde">
+    </form>
+    <p>---Frm-2 ---</p>
+    <form>
+        <input type="radio" name="lytis" value="vyras"> Vyras<br>
+        <input type="radio" name="lytis" value="moteris"> Moteris
+    </form>
+    <p>---Frm-3 ---</p>
+    <form>
+        Aš myliu tėtį:
+        <input type="checkbox" name="myliu" value="teti">
+        <br />
+        Aš myliu sesę:
+        <input type="checkbox" name="myliu" value="sese">
+        <br />
+        Aš myliu Gerdą:
+        <input type="checkbox" name="myliu" value="gerda">
+    </form>
+    <p>---Frm-4 ---</p>
+    <form name="input" action="html_formos_ivedimas_pvz.php" method="get">
+        Vardas:
+        <input type="text" name="vardas">
+        <input type="submit" value="Siųsti">
+        <h3>tipai formų</h3>
+        <br /><input type="button">
+        <br /><input type="checkbox">
+        <br /><input type="color">
+        <br /><input type="date">
+        <br /><input type="datetime-local">
+        <br /><input type="email">
+        <br /><input type="file">
+        <br /><input type="hidden">
+        <br /><input type="image">
+        <br /><input type="month">
+        <br /><input type="number">
+        <br /><input type="password">
+        <br /><input type="radio">
+        <br /><input type="range">
+        <br /><input type="reset">
+        <br /><input type="search">
+        <br /><input type="submit">
+        <br /><input type="tel">
+        <br /><input type="text"> (default value)
+        <br /><input type="time">
+        <br /><input type="url">
+        <br /><input type="week">
+
+
+        <br />
+        <select required>
+            <option value="Garliava">Garliava</option>
+            <option value="Kaunas">Kaunas</option>
+            <option value="Vilnius">Vilnius</option>
+            <option value="Klaipėda">Klaipėda</option>
+        </select>
+        <br />
+        <select name="" id="">
+            <option value="1">Pirmas</option>
+            <option value="2">Antras</option>
+            <option value="3">Trečias</option>
+        </select>
+        <br />
+        <select name="" id="" multiple>
+            <option value="1">Pirmas</option>
+            <option value="2">Antras</option>
+            <option value="3">Trečias</option>
+        </select>
+
+        <div>
+            <label for="">Jūsų komentaras:</label> <br>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Įrašykite savo tekstą"></textarea>
+        </div>
+        <button type="submit">Patvirtinti</button>
+        <button type="reset">Reset</button>
+    </form>
+
+
+    <h3>fraim'ai</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/94-xDYAIUQg" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/17bn6Wr5bwI" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+
+
+    <p>form Nurodo formos pradžią</p>
+    <p>input Nurodo įvedimo lauką</p>
+    <p>textarea Nurodo kelių eilučių įvedimo lauką</p>
+    <p>label Nurodo etiketes</p>
+    <p>fieldset Nurodo laukų komplektą</p>
+    <p>legend Nurodo laukų komplekto antraštę</p>
+    <p>select Nurodo pasirinkimo sąrašą</p>
+    <p>optgroup Nurodo pasirinkimo grupę</p>
+    <p>option Nurodo pasirinkimą drop-down grupėje</p>
+    <p>button Nurodo mygtuką</p>
+    <p>isindex Nevartotinas. Naudokite žymę input</p>
+    <p>dfn Nurodo apibrėžimą</p>
+
+    <a href="ftp://www.manualai.lt/ftp/programa.exe">Parsisiųsti programą</a>
+    <br />
+    <a href="mailto:arvydasgrigalauskas@gmail.com">siųsti laišką</a>
+
+    <p>a - Nurodo nuorodą</p>
+    <p>abbr - Nurodo sutrumpinimą</p>
+    <p>acronym - Nurodo akronimą</p>
+    <p>address - Nurodo kontaktinę autoriaus informaciją</p>
+    <p>applet - Nevartotinas. Nurodo įskiepį</p>
+    <p>area/ - Nurodo plotą viduje paveikslėlio žemėlapio (image-map)</p>
+    <p>b - Nurodo pastorintą šriftą (bold)</p>
+    <p>base/ - Nurodo visų nuorodų bazinį adresą pagal nutylėjimą</p>
+    <p>basefont / - Nevartotinas. Nurodo nutylimąjį teksto šriftą, spalvą ir dydį tekstiniame dokumente</p>
+    <p>bdo - Nurodo teksto kryptį</p>
+    <p>big - Nurodo didelį tekstą</p>
+    <p>blockquote - Nurodo citatos bloką</p>
+    <p>body - Nurodo dokumento kūną (body)</p>
+    <p>br / - Nurodo puslapio eilutės lūžio vietą</p>
+    <p>button - Nurodo paspaudžiamą mygtuką</p>
+    <p>caption - Nurodo lentelės antraštę</p>
+    <p>center - Nevartotinas. Nurodo teksto centravimą</p>
+    <p>cite - Nurodo citatą</p>
+    <p>code - Nurodo kompiuterinio kodo tekstą</p>
+    <p>col / - Nurodo požymių reikšmes viename ar keliuose lentelės stulpeliuose</p>
+    <p>colgroup - Nurodo lentelės stulpelių grupę formatavimui</p>
+    <p>dd - Nurodo termino paaiškinimą terminų sąraše</p>
+    <p>del - Nurodo ištrintą tekstą (perbrauktą)</p>
+    <p>dfn - Nurodo termino paaiškinimą</p>
+    <p>dir - Nevartotinas. Nurodo direktorijos sąrašą</p>
+    <p>div - Nurodo sekciją dokumente, naudojamas kaip konteineris kitiems elementams</p>
+    <p>dl - Nurodo paaiškinimų sąrašą</p>
+    <p>dt - Nurodo terminą terminų sąraše</p>
+    <p>em - Nurodo pasvirą italic tekstą</p>
+    <p>fieldset - Nurodo rėmelį aplink formos elementus. Skirta grupiavimui</p>
+    <p>font - Nevartotinas. Nurodo teksto šriftą, spalvą ir dydį</p>
+    <p>form - Nurodo HTML formą vartotojo informacijos įvedimui</p>
+    <p>frame / - Nurodo naują langą, rėmą (angl.: frame) rėmų komplekte (angl.: frameset)</p>
+    <p>frameset - Nurodo rėmų, langų komplektą</p>
+    <p>h1, h2 .. iki h6 - Nurodo HTML antraštes</p>
+    <p>head - Nurodo informaciją apie dokumentą</p>
+    <p>hr / - Nurodo horizontalią liniją</p>
+    <p>html - Nurodo HTML dokumentą</p>
+    <p>i - Nurodo pasvirą italic tekstą</p>
+    <p>iframe - Nurodo mozaikinį rėmą (angl.: inline frame)</p>
+    <p>img / - Nurodo paveikslėlį</p>
+    <p>input / - Nurodo varototjo informacijos įvedimui skirtą vietą</p>
+    <p>ins - Nurodo įterptą tekstą</p>
+    <p>isindex - Nevartotinas. Nurodo ieškomą indeksą, susijusį su dokumentu</p>
+    <p>kbd - Nurodo klaviatūros tekstą</p>
+    <p>label - Nurodo etiketę įvedimo laukui</p>
+    <p>legend - Nurodo formos elementams antraštę</p>
+    <p>li - Nurodo sąraše esantį elementą</p>
+    <p>link / - Nurodo sąryšį tarp dokumentų</p>
+    <p>map - Nurodo paveikslėlių žemėlapį</p>
+    <p>menu - Nevartotinas. Nurodo meniu sąrašą</p>
+    <p>meta / - Nurodo meta informaciją apie HTML dokumentą</p>
+    <p>noframes - Nurodo alternatyvų kodą, skirtą vartotojams, kurie nepalaiko langų, rėmų (frames)</p>
+    <p>noscript - Nurodo alternatyvų kodą, skirtą vartotojams, kurie nepalaiko skriptų (javascript ir kt.)</p>
+    <p>object - Nurodo objekto įterpimą (pvz.: flash)</p>
+    <p>ol - Nurodo tvarkingą sąrašą</p>
+    <p>optgroup - Pasirinkimų sąraše nurodo pasirinkimų grupę</p>
+    <p>option - Pasirininkimų sąraše nurodo pasirinkimą</p>
+    <p>p - Nurodo pastraipą</p>
+    <p>param / - Nurodo objekto parametrą (pvz.: flash)</p>
+    <p>pre - Nurodo iš anksto formatuotą tekstą</p>
+    <p>q - Nurodo trumpą citatą</p>
+    <p>s - Nevartotinas. Nurodo perbrauktą tekstą</p>
+    <p>samp - Nurodo pavyzdinį kompiuterinį tekstą</p>
+    <p>script - Nurodo kliento pusės skriptą (pvz.: javascript)</p>
+    <p>select - Nurodo pasirinkimų sąrašą (pvz.: išskleidžiamą)</p>
+    <p>small - Nurodo sumažintą tekstą</p>
+    <p>span - Nurodo sekciją dokumente</p>
+    <p>strike - Nevartotinas. Nurodo perbrauktą tekstą</p>
+    <p>strong - Nurodo pajuodintą tekstą (bold)</p>
+    <p>style - Nurodo dokumento stiliaus informaciją</p>
+    <p>sub - Nurodo pažemintą tekstą</p>
+    <p>sup - Nurodo pakeltą tekstą</p>
+    <p>table - Nurodo lentelę</p>
+    <p>tbody - Grupuoja lentelės vidurį, pagrindą (body)</p>
+    <p>td - Nurodo lentelės ląstelę</p>
+    <p>textarea - Nurodo kelių eilučių įvedimo lauką</p>
+    <p>tfoot - Grupuoja lentelės apatinę dalį (footer)</p>
+    <p>th - Nurodo antraštinę lentelės ląstelę</p>
+    <p>thead - Grupuoja viršutinę lentelės dalį. Skirta antraštėms</p>
+    <p>title - Nurodo dokumento pavadinimą, antraštę</p>
+    <p>tr - Nurodo lentelės eilutę</p>
+    <p>tt - Nurodo teletaipo tekstą</p>
+    <p>u - Nevartotinas. Nurodo pabrauktą tekstą</p>
+    <p>ul - Nurodo netvarkingą sąrašą</p>
+    <p>var - Nurodo kintamąjį (pastaba: tai nėra kintamasis kaip programavimo kalbose)</p>
+    <p>xmp - Nevartotinas. Nurodo iš anksto formatuotą tekstą</p>
+
+    <h1>Pagal alfabetas</h1>
+    <h2>Bendri</h2>
+    <p>!DOCTYPE - Nurodo dokumento tipą</p>
+    <p>html - Nurodo HTML dokumentą</p>
+    <p>body - Nurodo dokumento kūna - body</p>
+    <p>h1 to h6 - Nurodo HTML antraštes</p>
+    <p>p - Nurodo pastraipą</p>
+    <p>br / - Nurodo puslapio eilutės lūžio vietą</p>
+    <p>hr / - Nurodo horizontalią liniją</p>
+
+    <h2>Formatavimas</h2>
+    <p>acronym - Nurodo akronimą</p>
+    <p>abbr - Nurodo sutrumpinimą</p>
+    <p>address - Nurodo kontaktinę autoriaus informaciją</p>
+    <p>b - Nurodo pastorintą šriftą (bold)</p>
+    <p>bdo - Nurodo teksto kryptį</p>
+    <p>big - Nurodo didelį tekstą</p>
+    <p>blockquote - Nurodo citatos bloka</p>
+    <p>center - Nevartotinas. Nurodo teksto centravimą</p>
+    <p>cite - Nurodo citatą</p>
+    <p>code - Nurodo kompiuterinio kodo tekstą</p>
+    <p>del - Nurodo ištrintą tekstą (perbrauktą)</p>
+    <p>dfn - Nurodo termino paaiškinimą</p>
+    <p>em - Nurodo pasvirą italic tekstą</p>
+    <p>font - Nevartotinas. Nurodo šriftą, spalvą ir teksto dydį</p>
+    <p>i - Nurodo pasvirą italic tekstą</p>
+    <p>ins - Nurodo iterptą tekstą</p>
+    <p>kbd - Nurodo klaviaturos tekstą</p>
+    <p>pre - Nurodo iš anksto formatuotą tekstą</p>
+    <p>q - Nurodo trumpą citatą</p>
+    <p>s - Nevartotinas. Nurodo perbrauktą tekstą</p>
+    <p>samp - Nurodo pavyzdinį kompiuterinį tekstą</p>
+    <p>small - Nurodo sumažintą tekstą</p>
+    <p>strike - Nevartotinas. Nurodo perbrauktą tekstą</p>
+    <p>strong - Nurodo pajuodintą tekstą (bold)</p>
+    <p>sub - Nurodo pažemintą tekstą</p>
+    <p>sup - Nurodo pakeltą tekstą</p>
+    <p>tt - Nurodo teletaipo tekstą</p>
+    <p>u - Nevartotinas. Nurodo pabrauktą tekstą</p>
+    <p>var - Nurodo kintamaji (pastaba: tai nėra kintamasis, kaip programavimo kalbose)</p>
+    <p>xmp - Nevartotinas. Nurodo iš anksto formatuotą tekstą</p>
+
+    <h2>Formos</h2>
+    <p>form - Nurodo HTML formą vartotojo informacijos įvedimui</p>
+    <p>input / - Nurodo vartotojo informacijos įvedimui skirtą vietą</p>
+    <p>textarea - Nurodo keletos eilučių įvedimo lauką</p>
+    <p>button - Nurodo paspaudžiamą mygtuką</p>
+    <p>select - Nurodo pasirinkimų sąrašą (pvz.: išskleidžiamą)</p>
+    <p>optgroup - Pasirinkimų sąraše nurodo pasirinkimų grupę</p>
+    <p>option - Pasirininkimų sąraše nurodo pasirinkimą</p>
+    <p>label - Nurodo etiketę įvedimo laukui</p>
+    <p>fieldset - Nurodo rėmelį aplink formos elementus (skirta grupiavimui)</p>
+    <p>legend - Nurodo formos elementui antraštę</p>
+    <p>isindex - Nevartotinas. Nurodo ieškomą indeksą susijusį su dokumentu</p>
+
+    <h2>Rėmai, langai</h2>
+    <p>frame / - Nurodo naują langa, remą (angl.: frame) remų komplekte (angl.: frameset)</p>
+    <p>frameset - Nurodo rėmų, langų komplektą</p>
+    <p>noframes - Nurodo alternatyvų kodą skirtą vartotojams, kurie nepalaiko langų, rėmų (angl.: frames)</p>
+    <p>iframe - Nurodo mozaikinį rėmą (angl.: inline frame)</p>
+
+    <h2>Paveikslėliai</h2>
+    <p>img / - Nurodo paveikslėlį</p>
+    <p>map - Nurodo paveikslėlių žemėlapį</p>
+    <p>area / - Nurodo plotą, viduje paveikslėlio žemėlapio (image-map)</p>
+
+    <h2>Nuorodos</h2>
+    <p>a - Nurodo nuorodą</p>
+    <p>link / - Nurodo sąryšį tarp dokumentų</p>
+
+    <h2>Sąrašai</h2>
+    <p>ul - Nurodo netvarkingą sąrašą</p>
+    <p>ol - Nurodo tvarkingą sąrašą</p>
+    <p>li - Nurodo sąraše esantį elementą</p>
+    <p>dir - Nevartotinas. Nurodo direktorijos sąrašą</p>
+    <p>dl - Nurodo paaiškinimu sąrašą</p>
+    <p>dt - Nurodo terminą terminų sąrašę</p>
+    <p>dd - Nurodo termino paaiškinimą terminų sąraše</p>
+    <p>menu - Nevartotinas. Nurodo meniu sąrašą</p>
+
+    <h2>Lentelės</h2>
+    <p>table - Nurodo lentelę</p>
+    <p>caption - Nurodo lentelės antraštę</p>
+    <p>th - Nurodo antraštinę lentelės ląstelę</p>
+    <p>tr - Nurodo lentelės eilutę</p>
+    <p>td - Nurodo lentelės ląstelę</p>
+    <p>thead - Grupuoja viršutinę lentelės dalį. Skirta antraštėms</p>
+    <p>tbody - Grupuoja lentelės vidurį, pagrindą (body)</p>
+    <p>tfoot - Grupuoja lentelės apatinę dalį (footer)</p>
+    <p>col / - Nurodo požymių reikšmes viename ar keliuose lentelės stulpeliuose</p>
+    <p>colgroup - Nurodo lentelės stulpelių grupę formatavimui</p>
+
+    <h2>Stiliai</h2>
+    <p>style - Nurodo dokumento stiliaus informaciją</p>
+    <p>div - Nurodo sekciją dokumente, naudojamas kaip konteineris kitiems elementams</p>
+    <p>span - Nurodo sekciją dokumente</p>
+
+
+    <h2>Meta informacija</h2>
+    <p>head - Nurodo informaciją apie dokumentą</p>
+    <p>title - Nurodo dokumento pavadinimą, antraštę</p>
+    <p>meta - Nurodo meta informaciją apie HTML dokumentą</p>
+    <p>base / - Nurodo visų nuorodų bazinį adresą pagal nutylėjimą</p>
+    <p>basefont / - Nevartotinas. Nurodo nutylimajį teksto šriftą, spalvą ir dydį tekstiniame dokumente</p>
+
+    <h2>Programavimas</h2>
+    <p>script - Nurodo kliento pusės skriptą (pvz.: javascript)</p>
+    <p>noscript - Nurodo alternatyvų kodą skirtą vartotojams, kurie nepalaiko skriptų (javascript ir kt.)</p>
+    <p>applet - Nevartotinas. Nurodo iskiepį</p>
+    <p>object - Nurodo objekto iterpimą (pvz.: flash)</p>
+    <p>param / - Nurodo objekto parametrą (pvz.: flash)</p>
+
+
+
+    <div id="b1">
+        <h2>Paspaustos nuorodos - "nuoroda tekste pagal ID #b1" rezultatas</h2>
+    </div>
+    <div id="b2">
+        <h2>Paspaustos nuorodos - "nuoroda tekste pagal ID #b2" rezultatas</h2>
+    </div>
+
+    <div
+        style="background-image: url(https://g3.dcdn.lt/images/pix/katinas-60441355.jpg); height: 300px; background-repeat: no-repeat; background-position: center;">
+        teksto fonas - foto</div>
+    <br />
+    <div
+        style="background: url(https://g3.dcdn.lt/images/pix/katinas-60441355.jpg) no-repeat center center / cover; height: 300px;">
+        teksto fonas - foto</div>
+    <br />
+    <div
+        style="background-image: var(--fotoAdresas); height: 300px; background-repeat: no-repeat; background-position: center;">
+        teksto fonas - foto su <b style="color: var(--zalsva);">kintamojo (:root)</b> nuoroda</div>
+    <br />opacity: 0.2 - blanki foto <img src="https://g3.dcdn.lt/images/pix/katinas-60959003.jpg" alt="Kaciukas"
+        style="opacity: 0.2; width: 20%;">
+
+    <br>
+    <div>
+        <h1>Smooth Scroll</h1>
+
+        <div class="main" id="section1" style="scroll-behavior: smooth; background-color: yellow;">
+            <h2>Section 1</h2>
+            <a href="#section2">scroll-behavior: smooth; ->> perejimas į Section 2</a>
+            <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
+        </div>
+
+        <div class="main" id="section2" style="scroll-behavior: smooth; background-color: red;">
+            <h2>Section 2</h2>
+            <a href="#section1">scroll-behavior: smooth; ->> perejimas į Section 1</a>
+        </div>
+
+        <p><strong>Note:</strong> The scroll-behavior property is not supported in Internet Explorer.</p>
+    </div>
+
+</body>
+
+</html>
