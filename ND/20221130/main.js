@@ -28,3 +28,25 @@ rezult += pavardeAkt2[pavardeAkt2.length - 2];
 rezult += pavardeAkt2[pavardeAkt2.length - 1];
 console.log(rezult);
 alert(rezult);
+//-- 4------------------------
+let txt="Once upon a time in hollywood";
+txt=txt.replaceAll('o', '*').replaceAll('O', '*');
+console.log(txt);
+alert(txt);
+
+//--- 5 -----------------------------
+// 0 iki 2. Suskaičiuokite kiek yra nulių, vienetų ir dvejetų.
+// let x1;
+// let x2;
+// let x3;
+// let x4;
+let rez;
+let x1=Math.floor(Math.random() * 3);
+let x2=Math.floor(Math.random() * 3);
+let x3=Math.floor(Math.random() * 3);
+let x4=Math.floor(Math.random() * 3);
+rez=String(x1)+String(x2)+String(x3)+String(x4);
+console.log("Sugeneruoti skaičiai: " + rez);
+console.log("Skaičių 0 yra: " + (rez.length - rez.replaceAll('0', '').length));
+console.log("Skaičių 1 yra: " + (rez.length - rez.replaceAll('1', '').length));
+console.log("Skaičių 2 yra: " + (rez.length - rez.replaceAll('2', '').length));
