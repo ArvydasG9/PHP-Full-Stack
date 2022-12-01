@@ -8,7 +8,7 @@ else {
     console.log(vardasAkt);
     alert(pavardeAkt);
 }
-//-----------------------------
+//-------- 2 ---------------------
 const vardasMe = "Arvydas";
 const pavardeMe = "Grigalauskas";
 const born = new Date("2000");
@@ -16,7 +16,7 @@ let d = new Date();
 d = d.getFullYear() - born.getFullYear();
 console.log("Aš esu " + vardasMe + " " + pavardeMe + ". Man yra " + d + " metai(ų)");
 alert("Aš esu " + vardasMe + " " + pavardeMe + ". Man yra " + d + " metai(ų)");
-//----------------------
+//-------- 3 --------------
 const vardasAkt2 = vardasAkt;
 const pavardeAkt2 = pavardeAkt;
 let rezult = "";
@@ -50,3 +50,8 @@ console.log("Sugeneruoti skaičiai: " + rez);
 console.log("Skaičių 0 yra: " + (rez.length - rez.replaceAll('0', '').length));
 console.log("Skaičių 1 yra: " + (rez.length - rez.replaceAll('1', '').length));
 console.log("Skaičių 2 yra: " + (rez.length - rez.replaceAll('2', '').length));
+
+alert("Sugeneruoti skaičiai: " + rez);
+alert("Skaičių 0 yra: " + (rez.length - rez.replaceAll('0', '').length));
+alert("Skaičių 1 yra: " + (rez.length - rez.replaceAll('1', '').length));
+alert("Skaičių 2 yra: " + (rez.length - rez.replaceAll('2', '').length));
