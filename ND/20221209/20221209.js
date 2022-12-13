@@ -57,6 +57,7 @@ let dbl = false;//dubliavimo registacija
 let elStr = '';
 let ar3a = [];//masyvas apzaidimams
 ar3a = ar3_x;
+console.log('test', ar3_x);
 // let ar3b = [];//masyvas apzaidimams
 // ar3b = ar3_x;
 // console.log(ar3_x)
