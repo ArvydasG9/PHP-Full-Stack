@@ -38,22 +38,27 @@ const vinisMax = 8.5 * 10;
 let ikalta = 0;
 let smugiai = 0;
 // -------------- 2 a -------
-do {
-    ikalta += rand(5, 20);
-    smugiai++;
+for (let i = 0; i < 5; i++) {
+    let ikalta = 0;
+    do {
+        ikalta += rand(5, 20);
+        smugiai++;
+    }
+    while (ikalta <= vinisMax)
 }
-while (ikalta <= vinisMax)
 console.log('Mažais smūgiais įkalta per ' + smugiai + ' smūgius');
 // --------------------------
 // -------------- 2 b -------
 ikalta = 0;
 smugiai = 0;
-
-do {
-    if (rand(0, 1) != 1) ikalta += rand(20, 30);//jei pataikom
-    smugiai++;
+for (let i = 0; i < 5; i++) {
+    let ikalta = 0;
+    do {
+        if (rand(0, 1) != 1) ikalta += rand(20, 30);//jei pataikom
+        smugiai++;
+    }
+    while (ikalta <= vinisMax)
 }
-while (ikalta <= vinisMax)
 console.log('Smarkiais smūgiais įkalta per ' + smugiai + ' smūgius');
 // --------------------------
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

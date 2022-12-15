@@ -57,4 +57,4 @@ function fn5(from, to, limit) {
     }
     return arr;
 }
-fnPrint(fn5(10, 15, 10));
+fnPrint(fn5(3, 15, 10));
