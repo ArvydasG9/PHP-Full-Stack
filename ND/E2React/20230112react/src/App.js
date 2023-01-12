@@ -44,9 +44,10 @@ const FormEntry = () => {
 
   const handleForm = (e) => {
     e.preventDefault();
-    console.log(tasks)
-    console.log(currentTask)
-    console.log(e)
+
+    // console.log(tasks)//?????????????????
+    console.log(e.target)//???????????????????????
+    console.log(e)//?????????????????????????????????????
 
     setTasks([...tasks, { name: currentTask, done: false }]);
   }
@@ -57,8 +58,8 @@ const FormEntry = () => {
   }
 
   const handleEdit = (e, index) => {
-    console.log(e)
-    console.log(index)
+    // console.log(e)
+    // console.log(index)
     tasks[index].name = setCurrentTask(e.target.value);
     setTasks([...tasks]);
   }
@@ -71,12 +72,14 @@ const FormEntry = () => {
   return (
     <>
       <h1>Task Manager</h1>
-      <form className="input-group" >
+      <form className="input-group" onSubmit={handleForm}>
         <input type="text" className="form-control" onChange={(e) => setCurrentTask(e.target.value)} />
         <button className="btn btn-primary" onClick={handleForm}>Išsaugoti</button>
       </form>
       {tasks.map((value, index) =>
         // <li key={value.name + index} onClick={ (e) => handleDone(e, index) } className={value.done ? 'done' : ''}>{value.name}</li>        
+
+
         <div key={value.name + index} className={value.done ? 'done item' : 'item'}>
           {value.name}
           <div>
@@ -84,8 +87,6 @@ const FormEntry = () => {
             <IoBuild onClick={(e) => handleEdit(e, index)} />
             <IoCloseCircleSharp onClick={(e) => handleDelete(e, index)} />
           </div>
-
-
         </div>
 
       )}
