@@ -40,16 +40,14 @@ const Container = (propsai) => {
 
 const FormEntry = () => {
   const [tasks, setTasks] = useState([]);
-  const [currentTask, setCurrentTask] = useState();
+  // const [currentTask, setCurrentTask] = useState();
 
   const handleForm = (e) => {
     e.preventDefault();
-
-    // console.log(tasks)//?????????????????
-    console.log(e.target)//???????????????????????
-    console.log(e)//?????????????????????????????????????
-
-    setTasks([...tasks, { name: currentTask, done: false }]);
+    // setTasks([...tasks, { name: currentTask, done: false }]);
+    setTasks([...tasks, { name: document.querySelector('#text').value, done: false }]);
+    // setCurrentTask('');
+    document.querySelector('#text').value = '';
   }
 
   const handleDone = (e, index) => {
@@ -58,9 +56,11 @@ const FormEntry = () => {
   }
 
   const handleEdit = (e, index) => {
-    // console.log(e)
-    // console.log(index)
-    tasks[index].name = setCurrentTask(e.target.value);
+    // tasks[index].name = setCurrentTask(e.target.value);
+
+    // tasks[index].name = document.querySelector('#text').value;
+    document.querySelector('#text').value = tasks[index].name;
+    handleDelete(e, index)
     setTasks([...tasks]);
   }
 
@@ -73,13 +73,13 @@ const FormEntry = () => {
     <>
       <h1>Task Manager</h1>
       <form className="input-group" onSubmit={handleForm}>
-        <input type="text" className="form-control" onChange={(e) => setCurrentTask(e.target.value)} />
-        <button className="btn btn-primary" onClick={handleForm}>Išsaugoti</button>
+        {/* <input id="text" type="text" className="form-control" onChange={(e) => setCurrentTask(e.target.value)} /> */}
+        <input id="text" type="text" className="form-control" />
+
+        <button className="btn btn-primary" >Išsaugoti</button>
       </form>
       {tasks.map((value, index) =>
         // <li key={value.name + index} onClick={ (e) => handleDone(e, index) } className={value.done ? 'done' : ''}>{value.name}</li>        
-
-
         <div key={value.name + index} className={value.done ? 'done item' : 'item'}>
           {value.name}
           <div>
