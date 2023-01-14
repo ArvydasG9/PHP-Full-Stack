@@ -30,6 +30,8 @@ const Main = () => {
         setOnlyPvm(c);
         setTotal(d);
 
+        setSumBePvm(sumBePvm);
+
         console.log(pvm + ' v/ ' + val + ' / ' + onlyPvm + ' / ' + total)
         console.log(pvm + ' v+/ ' + b + ' / ' + onlyPvm + ' / ' + total)
         console.log(pvm + ' / ' + sumBePvm + ' / ' + onlyPvm + ' / ' + total)
@@ -69,7 +71,7 @@ const Main = () => {
                     </select>
                     <input onChange={(e) => fnSumBePvm(e.target.value)} type="text" id="sumBePvm" defaultValue={sumBePvm} />
                     <input type="text" id="sumPvm" disabled="disabled" defaultValue={onlyPvm} />
-                    <input onChange={(e) => fnTotal(e.target.value)} type="text" id="total" defaultValue={total} />
+                    <input onChange={fnTotal} type="text" id="total" defaultValue={total} />
                 </div>
 
             </form>
