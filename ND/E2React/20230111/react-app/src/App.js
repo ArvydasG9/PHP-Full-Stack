@@ -9,8 +9,8 @@ function App() {
         <p>ND 2023-01-11 React</p>
       </header>
       <div className='task'>
+      <h1>Užduotis:</h1>
         <p>
-          <h1>Užduotis:</h1>
           Jums duodamas JSON kodas:<br/>
           https://pastebin.com/MccsRE0p<br/>
 
