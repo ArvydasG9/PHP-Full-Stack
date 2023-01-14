@@ -2,80 +2,69 @@ import React from 'react';
 import { useState } from 'react';
 
 const Main = () => {
-    // const id = useId();
     const [pvm, setPvm] = useState(21);
     const [sumBePvm, setSumBePvm] = useState(0);
     const [onlyPvm, setOnlyPvm] = useState(0);
     const [total, setTotal] = useState(0);
 
     const fnPvm = (e) => {
-        console.log('fnPvm')
         let a = e.target.value;
         let b = sumBePvm;//Activ???
-        let c = b * a / 100;
-        let d = b * (a / 100 + 1);//Activ???
+        let c = Math.round(b * a) / 100;//b * a / 100;
+        let d = Math.round(b * (a / 100 + 1) * 100) / 100;//Activ???
         setPvm(a);
         setSumBePvm(b);
         setOnlyPvm(c);
         setTotal(d);
     }
 
-    const fnSumBePvm = (val) => {
-        console.log('fnSumBePvm')
-        let b = val;
+    const fnSumBePvm = (e) => {
+        let b = e.target.value;
         let a = pvm;
-        let c = b * a / 100;
-        let d = b * (a / 100 + 1);
+        let c = Math.round(b * a) / 100;
+        let d = Math.round(b * (a / 100 + 1) * 100) / 100;
         setSumBePvm(b);
         setOnlyPvm(c);
         setTotal(d);
-
-        console.log(pvm + ' v/ ' + val + ' / ' + onlyPvm + ' / ' + total)
-        console.log(pvm + ' v+/ ' + b + ' / ' + onlyPvm + ' / ' + total)
-        console.log(pvm + ' / ' + sumBePvm + ' / ' + onlyPvm + ' / ' + total)
+        console.log('??? -> b = e.target.value: ' + e.target.value + '; sumBePvm: ' + sumBePvm)//????
     }
 
-
-    const fnTotal = (val) => {
-        console.log('fnTotal')
-        let d = val;
+    const fnTotal = (e) => {
+        let d = e.target.value;
         let a = pvm;
-        let b = d / (a / 100 + 1);
-        let c = b * a / 100;
+        let b = Math.round((d / (a / 100 + 1)) * 100) / 100;
+        let c = Math.round(b * a) / 100;
         //    setPvm(a);
         setSumBePvm(b);
         setOnlyPvm(c);
         setTotal(d);
     }
 
-
-
-
     return (
-        <main>
-            <form>
-
-                <div className='col' style={{ alignItems: 'flex-end' }}>
-                    <label>PVM tarifas</label>
-                    <label>Suma (be PVM)</label>
-                    <label>PVM suma</label>
-                    <label>Bendra suma (su PVM) </label>
-                </div>
-                <div className='col'>
-                    <select onChange={fnPvm} name="vat_percent" id="vat_percent">
-                        <option value="21">21%</option>
-                        <option value="9">9%</option>
-                        <option value="5">5%</option>
-                    </select>
-                    <input onChange={(e) => fnSumBePvm(e.target.value)} type="text" id="sumBePvm" defaultValue={sumBePvm} />
-                    <input type="text" id="sumPvm" disabled="disabled" defaultValue={onlyPvm} />
-                    <input onChange={fnTotal} type="text" id="total" defaultValue={total} />
-                </div>
-
-            </form>
-
-            <div>Įveskite sumą be PVM arba bendrą sumą (su PVM).</div>
-        </main>
+        
+        <div className='rezult'>
+            <main>
+                <form>
+                    <div className='col' style={{ alignItems: 'flex-end' }}>
+                        <label>PVM tarifas</label>
+                        <label>Suma (be PVM)</label>
+                        <label>PVM suma</label>
+                        <label>Bendra suma (su PVM) </label>
+                    </div>
+                    <div className='col'>
+                        <select onChange={fnPvm} name="vat_percent" id="pvm">
+                            <option value="21">21%</option>
+                            <option value="9">9%</option>
+                            <option value="5">5%</option>
+                        </select>
+                        <input onChange={fnSumBePvm} type="text" id="sumBePvm" value={sumBePvm} />
+                        <input type="text" id="sumPvm" disabled="disabled" value={onlyPvm} />
+                        <input onChange={fnTotal} type="text" id="total" value={total} />
+                    </div>
+                </form>
+                <div className='foot'>Įveskite sumą be PVM arba bendrą sumą (su PVM).</div>
+            </main>            
+        </div>
     );
 
 }
@@ -123,4 +112,5 @@ const Main = () => {
 //         </main>
 //     return html;
 // }
+
 export default Main;
