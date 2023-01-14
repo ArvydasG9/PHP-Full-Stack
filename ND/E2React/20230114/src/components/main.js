@@ -30,8 +30,6 @@ const Main = () => {
         setOnlyPvm(c);
         setTotal(d);
 
-        setSumBePvm(sumBePvm);
-
         console.log(pvm + ' v/ ' + val + ' / ' + onlyPvm + ' / ' + total)
         console.log(pvm + ' v+/ ' + b + ' / ' + onlyPvm + ' / ' + total)
         console.log(pvm + ' / ' + sumBePvm + ' / ' + onlyPvm + ' / ' + total)
