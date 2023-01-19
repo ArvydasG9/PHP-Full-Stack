@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        /* https://www.youtube.com/watch?v=XXlw7TUxRVY&t=303s    46:45 */
+        /* --- Container ---
+            flex-direction: ;
+            flex-wrap: ;
+            flex-flow: ;
+            gap: ;
+            justify-content: ;
+            align-items: ;
+            align-content: ; --> dirba poroje tik su flex-wrap: wrap; */
+        /* --- item ---
+            align-self: ;
+            flex-grow: ;
+            flex-shrink: ;
+            flex-basis: ;
+            flex: ;
+            order: ; */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flexContainer {
+            /* ...flex - horizont visam ekranui, inline-flex horizont tiek kiek reikia */
+            display: flex;
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+            /* align-content: center; */
+            /* flex-flow: column wrap; */
+            /* min-height: 80vh; */
+            /* height: 100vh; */
+            /* margin: 5px; */
+            /* gap: 15px; */
+            /* justify-content: space-between; */
+            /* align-items: center; */
+
+            border: 10px solid rgb(64, 238, 21);
+        }
+
+        @media screen and (max-width:650px) {
+            .flexContainer {
+                flex-direction: column;
+            }
+
+            main {
+                order: -2;
+            }
+
+            aside {
+                order: -1;
+            }
+        }
+
+        .flexItem {
+            padding: 10px;
+            color: white;
+            text-align: center;
+            /*.... text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2); */
+
+            width: 25%;
+            /* margin: 5px; */
+            background: linear-gradient(45deg, red, green, blue);
+        }
+
+        .item-2 {
+            align-self: flex-start;
+            /*---- flex-grow: 1; -> laisvų tarpų užpildymo pasidalinimas pagal proporcijas */
+            /* flex-grow: 1; */
+            /*---- flex-shrink: 2; -> pasiruošimas atiduoti proporcingai savo vidinės erdvės(susispausti), kai trūksta vietos. didesnis sk atiduoda daugiau*/
+            /* flex-shrink: 2; */
+            /* ....flex-basis: 300px; -> nustato el dydį, iki laisvos vietos dalybų pradžios. */
+            /* flex-basis: 300px; */
+            /* ...flex: 1 2 300px; -> apjungia visus aprašytus auksčiau ..-grow:, ..-shrink, ..-basis: */
+            /* flex: 1 2 300px; */
+            /* ...order: 2; -> Rušiavimas el. pagal nutylėjima visi yra 0. Gali būti su '-' */
+            /* order: 2; */
+
+            font-size: 50px;
+        }
+
+        header,
+        footer {
+            background-color: black;
+            color: white;
+            height: 50px;
+            /* justify-content: center;
+            align-items: center;
+            align-content: center; */
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+            background-color: beige;
+            border: 2px solid green;
+        }
+
+        aside {
+            background-color: aquamarine;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Kepurė</header>
+    <main>
+        <div class="flexContainer">
+            <div class="flexItem">1</div>
+            <div class="flexItem item-2">2</div>
+            <div class="flexItem">3</div>
+            <div class="flexItem">4</div>
+            <div class="flexItem">5</div>
+            <div class="flexItem">6</div>
+            <div class="flexItem">7</div>
+            <div class="flexItem">8</div>
+        </div>
+    </main>
+    <aside>asis</aside>
+    <footer>Batai</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100;800&display=swap');
+
+:root {
+    --adresas: url(image.jpg);
+    --srifto-spalva: rgb(255, 224, 224);
+}
+h1 {
+    color: var(--srifto-spalva);
+}
+
+b {
+    color: red
+}
+
+.klase1 {
+    color: blue;
+    font-family: 'Gluten', cursive;
+}
+
+/* klasem priekyje reikalingas taskas (.)*/
+
+#ciaID {
+    color: green
+}
+
+/* identifikatoriam priekyje reikalingos groteles (#)*/
+div p b {
+    background-color: rgb(255, 216, 0)
+}
+
+div,
+.kls,
+#iii,
+div b {
+    background-color: aquamarine
+}
+
+
+.klase1:hover {
+    color: chartreuse
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float pozicionavimas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header,
+        footer {
+            float: left;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        main {
+            float: left;
+            width: 50%;
+            background-color: rgb(17, 250, 250);
+            margin: 0 2.5%;
+            padding: 20px 2.5%;
+            height: 60vh;
+        }
+
+        aside {
+            float: left;
+            width: 20%;
+            background-color: yellow;
+            margin: 0 2.5%;
+            padding: 20px 2.5%;
+                 /* absolute - puslapio atzvilgiu, fixed - windows atzvilgiu, relative - saves paties atzvilgiu */
+            position: relative;
+            top: -10px;
+        }
+
+        #plus {
+            background-color: red;
+            color: white;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            /* absolute - puslapio atzvilgiu, fixed - windows atzvilgiu, relative - saves paties atzvilgiu */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Kepurė</header>
+    
+    <main>
+        <h1>A-main</h1>
+        <div>divas</div>
+    </main>
+    <div id="plus">+</div>
+    <aside>
+        B-aside
+    </aside>
+    <footer>Batai</footer>
+</body>
+
+</html>
