@@ -1,6 +1,8 @@
-/AG
-/Pamokos
-/ND
+AG/
+Pamokos/
+ND/
 
 node_modules/
 /.vscode
+
+text.txt
